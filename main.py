@@ -14,11 +14,13 @@ def wordcount():
 def charactercount():
     lowercased = file_contents.lower()
     charactercounts = {}
+    abc = "a b c d e f g h i j k l m n o p q r s t u v w x y z"
     for f in lowercased:
-        if f in charactercounts:
-            charactercounts[f] += 1
-        else:  
-            charactercounts[f] = 1
+        if f in abc.split():
+            if f in charactercounts:
+                charactercounts[f] += 1
+            else:  
+                charactercounts[f] = 1
 
     return print(charactercounts)
 
