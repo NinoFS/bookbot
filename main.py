@@ -9,8 +9,20 @@ def wordcount():
     wordnumber = 0
     for f in words:
         wordnumber += 1
-    return print(wordnumber)
+    return print("Word Count",wordnumber)
+
+def charactercount():
+    lowercased = file_contents.lower()
+    charactercounts = {}
+    for f in lowercased:
+        if f in charactercounts:
+            charactercounts[f] += 1
+        else:  
+            charactercounts[f] = 1
+
+    return print(charactercounts)
 
 
-main()
+#main()
 wordcount()
+charactercount()
